@@ -16,6 +16,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Verificar si los archivos de PHPMailer existen antes de incluirlos
+
+
+$gmail= $_POST['email'];
+$nombre= $_POST['name'];
+
 $mailerFiles = [
     'src/Exception.php',
     'src/PHPMailer.php',
