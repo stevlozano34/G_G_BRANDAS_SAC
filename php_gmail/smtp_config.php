@@ -5,9 +5,8 @@ return [
         'host' => 'smtp.gmail.com',
         'username' => 'grupoblogalbrandsperu@gmail.com',
         'password' => 'tzzr rjbj rdoo tafo', // Contraseña de aplicación real
-        'port' => 5870,
-        'encryption' => 'tls',
-        'timeout' => 10  // Reducido a 10 segundos para mejorar la respuesta en servidores compartidos
+        'port' => 587,
+        'encryption' => 'tls'
     ],
     'sender' => [
         'email' => 'grupoblogalbrandsperu@gmail.com',

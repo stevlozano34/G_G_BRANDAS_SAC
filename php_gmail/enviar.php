@@ -18,8 +18,7 @@ use PHPMailer\PHPMailer\Exception;
 // Verificar si los archivos de PHPMailer existen antes de incluirlos
 
 
-$gmail= $_POST['email'];
-$nombre= $_POST['name'];
+
 
 $mailerFiles = [
     'src/Exception.php',
@@ -55,8 +54,7 @@ if (file_exists(__DIR__ . '/smtp_config.php')) {
             'username' => 'grupoblogalbrandsperu@gmail.com',
             'password' => '', // Debe ser actualizado
             'port' => 587,
-            'encryption' => 'tls',
-            'timeout' => 15
+            'encryption' => 'tls'
         ],
         'sender' => [
             'email' => 'grupoblogalbrandsperu@gmail.com',
@@ -91,7 +89,12 @@ header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
 header('Access-Control-Max-Age: 86400'); // Cache por 24 horas
 
 // Función para respuesta JSON
+
 function jsonResponse($success, $message, $data = null) {
+    if ($success) {
+        header('Location: /Grupo_Global_Brands_SAC/index.html');
+        exit;
+    }
     echo json_encode([
         'success' => $success,
         'message' => $message,
@@ -101,61 +104,61 @@ function jsonResponse($success, $message, $data = null) {
     exit;
 }
 
-// Función para validar email
-function validarEmail($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-}
+// // Función para validar email
+// function validarEmail($email) {
+//     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+// }
 
-// Función para sanitizar datos
-function sanitizar($data) {
-    return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
-}
+// // Función para sanitizar datos
+// function sanitizar($data) {
+//     return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+// }
 
-// Manejar preflight OPTIONS request
-if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit;
-}
+// // Manejar preflight OPTIONS request
+// if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+//     http_response_code(200);
+//     exit;
+// }
 
 // Función para manejar el envío de formulario sin PHPMailer
 function handleFormSubmissionWithoutPHPMailer($smtpConfig) {
     // Obtener datos del POST o JSON
     $input = json_decode(file_get_contents('php://input'), true);
     
-    if ($input) {
-        // Datos vienen como JSON
-        $nombre   = sanitizar($input['nombre'] ?? $input['name'] ?? '');
-        $email    = sanitizar($input['email'] ?? '');
-        $telefono = sanitizar($input['telefono'] ?? $input['phone'] ?? '');
-        $empresa  = sanitizar($input['empresa'] ?? $input['company'] ?? '');
-        $servicio = sanitizar($input['servicio'] ?? $input['service'] ?? '');
-        $mensaje  = sanitizar($input['mensaje'] ?? $input['message'] ?? '');
-    } else {
-        // Datos vienen como form-data
-        $nombre   = sanitizar($_POST['nombre'] ?? $_POST['name'] ?? '');
-        $email    = sanitizar($_POST['email'] ?? '');
-        $telefono = sanitizar($_POST['telefono'] ?? $_POST['phone'] ?? '');
-        $empresa  = sanitizar($_POST['empresa'] ?? $_POST['company'] ?? '');
-        $servicio = sanitizar($_POST['servicio'] ?? $_POST['service'] ?? '');
-        $mensaje  = sanitizar($_POST['mensaje'] ?? $_POST['message'] ?? '');
-    }
+    // if ($input) {
+    //     // Datos vienen como JSON
+    //     $nombre   = sanitizar($input['nombre'] ?? $input['name'] ?? '');
+    //     $email    = sanitizar($input['email'] ?? '');
+    //     $telefono = sanitizar($input['telefono'] ?? $input['phone'] ?? '');
+    //     $empresa  = sanitizar($input['empresa'] ?? $input['company'] ?? '');
+    //     $servicio = sanitizar($input['servicio'] ?? $input['service'] ?? '');
+    //     $mensaje  = sanitizar($input['mensaje'] ?? $input['message'] ?? '');
+    // } else {
+    //     // Datos vienen como form-data
+    //     $nombre   = sanitizar($_POST['nombre'] ?? $_POST['name'] ?? '');
+    //     $email    = sanitizar($_POST['email'] ?? '');
+    //     $telefono = sanitizar($_POST['telefono'] ?? $_POST['phone'] ?? '');
+    //     $empresa  = sanitizar($_POST['empresa'] ?? $_POST['company'] ?? '');
+    //     $servicio = sanitizar($_POST['servicio'] ?? $_POST['service'] ?? '');
+    //     $mensaje  = sanitizar($_POST['mensaje'] ?? $_POST['message'] ?? '');
+    // }
     
     // Validación de campos obligatorios
-    if (empty($nombre)) {
-        jsonResponse(false, 'El nombre es obligatorio');
-    }
-    if (empty($email) || !validarEmail($email)) {
-        jsonResponse(false, 'El email es obligatorio y debe ser válido');
-    }
-    if (empty($telefono)) {
-        jsonResponse(false, 'El teléfono es obligatorio');
-    }
-    if (empty($servicio)) {
-        $servicio = 'Consulta general';
-    }
-    if (empty($mensaje)) {
-        $mensaje = 'Sin mensaje adicional';
-    }
+    // if (empty($nombre)) {
+    //     jsonResponse(false, 'El nombre es obligatorio');
+    // }
+    // if (empty($email) || !validarEmail($email)) {
+    //     jsonResponse(false, 'El email es obligatorio y debe ser válido');
+    // }
+    // if (empty($telefono)) {
+    //     jsonResponse(false, 'El teléfono es obligatorio');
+    // }
+    // if (empty($servicio)) {
+    //     $servicio = 'Consulta general';
+    // }
+    // if (empty($mensaje)) {
+    //     $mensaje = 'Sin mensaje adicional';
+    // }
     
     // Registrar en log
     error_log("[FORM SUBMIT] Nuevo mensaje recibido de $nombre ($email)");
@@ -185,12 +188,12 @@ function handleFormSubmissionWithoutPHPMailer($smtpConfig) {
     
     👤 Nombre: $nombre
     📧 Email: $email
-    📱 Teléfono: $telefono
-    🏢 Empresa: " . ($empresa ?: 'No especificada') . "
-    🎯 Servicio: $servicio
+    📱 Teléfono: 123
+    🏢 Empresa: " . 'No especificada'."
+    🎯 Servicio: .
     
     💬 Mensaje:
-    $mensaje
+
     
     ==========================
     Este mensaje fue enviado desde el formulario de contacto de Grupo Global Brands
@@ -330,30 +333,30 @@ if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] === "POST") 
         $mensaje  = sanitizar($input['mensaje'] ?? $input['message'] ?? '');
     } else {
         // Datos vienen como form-data
-        $nombre   = sanitizar($_POST['nombre'] ?? $_POST['name'] ?? '');
-        $email    = sanitizar($_POST['email'] ?? '');
-        $telefono = sanitizar($_POST['telefono'] ?? $_POST['phone'] ?? '');
-        $empresa  = sanitizar($_POST['empresa'] ?? $_POST['company'] ?? '');
-        $servicio = sanitizar($_POST['servicio'] ?? $_POST['service'] ?? '');
-        $mensaje  = sanitizar($_POST['mensaje'] ?? $_POST['message'] ?? '');
+        $nombre   = $_POST['name'];
+        $email    = $_POST['email'];
+        $telefono = $_POST['telefono'];
+        $empresa  = $_POST['company'];
+        $servicio = $_POST['service'] ;
+        $mensaje  = $_POST['message'];
     }
     
     // Validación de campos obligatorios
-    if (empty($nombre)) {
-        jsonResponse(false, 'El nombre es obligatorio');
-    }
-    if (empty($email) || !validarEmail($email)) {
-        jsonResponse(false, 'El email es obligatorio y debe ser válido');
-    }
-    if (empty($telefono)) {
-        jsonResponse(false, 'El teléfono es obligatorio');
-    }
-    if (empty($servicio)) {
-        $servicio = 'Consulta general';
-    }
-    if (empty($mensaje)) {
-        $mensaje = 'Sin mensaje adicional';
-    }
+    // if (empty($nombre)) {
+    //     jsonResponse(false, 'El nombre es obligatorio');
+    // }
+    // if (empty($email) || !validarEmail($email)) {
+    //     jsonResponse(false, 'El email es obligatorio y debe ser válido');
+    // }
+    // if (empty($telefono)) {
+    //     jsonResponse(false, 'El teléfono es obligatorio');
+    // }
+    // if (empty($servicio)) {
+    //     $servicio = 'Consulta general';
+    // }
+    // if (empty($mensaje)) {
+    //     $mensaje = 'Sin mensaje adicional';
+    // }
 
     // Configuración SMTP optimizada para producción
     function configurarSMTP($mail, $smtpConfig, $intento = 1) {
