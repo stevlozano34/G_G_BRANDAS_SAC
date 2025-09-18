@@ -1,0 +1,24 @@
+.cid-uWpIcP8h0l .mbr-fallback-image.disabled {
+    display: none;
+}
+
+.cid-uWpIcP8h0l .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("../_images/background1.jpg");
+}
+
+.cid-uWpIcP8h0l .image-wrap {
+    height: 500px;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP8h0l .image-wrap {
+        height: 450px;
+    }
+}

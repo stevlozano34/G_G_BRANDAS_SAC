@@ -1,0 +1,109 @@
+.cid-uWpIcP6Y1A {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    background-image: url("/images/hero/hero1.jpg");
+}
+
+.cid-uWpIcP6Y1A .mbr-fallback-image.disabled {
+    display: none;
+}
+
+.cid-uWpIcP6Y1A .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.cid-uWpIcP6Y1A .row {
+    justify-content: center;
+}
+
+.cid-uWpIcP6Y1A .card {
+    justify-content: flex-end;
+}
+
+.cid-uWpIcP6Y1A .content-wrapper .mbr-section-title {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP6Y1A .content-wrapper .mbr-section-title {
+        margin-bottom: 20px;
+    }
+}
+
+.cid-uWpIcP6Y1A .content-wrapper .text-wrapper .mbr-text {
+    width: 60%;
+    display: inline-block;
+    margin-bottom: 0;
+    opacity: .6;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP6Y1A .content-wrapper .text-wrapper .mbr-text {
+        width: 100%;
+    }
+}
+
+.cid-uWpIcP6Y1A .border-wrapper {
+    margin-top: 125px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    opacity: .4;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP6Y1A .border-wrapper {
+        margin-top: 30px;
+    }
+}
+
+.cid-uWpIcP6Y1A .desc-wrapper {
+    margin-top: 50px;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP6Y1A .desc-wrapper {
+        margin-top: 30px;
+    }
+}
+
+.cid-uWpIcP6Y1A .desc-wrapper .mbr-desc {
+    margin-bottom: 0;
+}
+
+.cid-uWpIcP6Y1A .mbr-section-btn {
+    margin-top: 50px;
+    text-align: right;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP6Y1A .mbr-section-btn {
+        margin-top: 20px;
+        text-align: left;
+    }
+}
+
+.cid-uWpIcP6Y1A .mbr-section-btn .btn {
+    margin-bottom: 0;
+}
+
+.cid-uWpIcP6Y1A .mbr-section-title {
+    color: #ffffff;
+    text-align: center;
+}
+
+.cid-uWpIcP6Y1A .mbr-text,
+.cid-uWpIcP6Y1A .text-wrapper {
+    color: #ffffff;
+    text-align: center;
+}
+
+.cid-uWpIcP6Y1A .mbr-desc {
+    color: #ffffff;
+}

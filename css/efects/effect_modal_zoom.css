@@ -1,0 +1,38 @@
+/* Efecto de zoom para el modal */
+@keyframes modalZoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoomOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Clase para animación de entrada */
+.modal.zoom-enter {
+  animation: modalZoomIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Clase para animación de salida */
+.modal.zoom-exit {
+  animation: modalZoomOut 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+/* Asegurar que el modal mantenga su posición fija */
+.modal {
+  transform-origin: center center;
+  will-change: transform, opacity;
+}

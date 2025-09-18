@@ -1,0 +1,123 @@
+:root {
+  /* ================= BACKGROUND ================= */
+  --background: #E6F3F3;
+  --background-900: #A9E5E6;
+  --background-800: #79D9DA;
+  --background-700: #00C6CA;
+  --background-600: #00A8AD;
+  --background-dark: #001819;
+  --background-dark-900: #002628;
+  --background-dark-800: #003D40;
+  --background-dark-700: #005458;
+  --background-dark-600: #006B70;
+
+  /* ================= DOMINANT ================= */
+  --dominant-color: #018786;
+  --dominant-dark-color: #004243;
+  --dominant-darken-color: #005959;
+  --dominant-light-color: #D2F1F0;
+  --dominant-lighten-color: #4FB7B6;
+
+  /* ================= PRIMARY ================= */
+  --primary-color: #3700B3;
+  --primary-dark-color: #30345E;
+  --primary-darken-color: #000082;
+  --primary-light-color: #D1D5ED;
+  --primary-lighten-color: #733AE6;
+
+  /* ================= SECONDARY ================= */
+  --secondary-color: #78D2C5;
+  --secondary-dark-color: #004238;
+  --secondary-darken-color: #45A095;
+  --secondary-light-color: #D3F1EC;
+  --secondary-lighten-color: #ABFFF8;
+
+  /* ================= SUCCESS ================= */
+  --success-color: #20AC6B;
+  --success-dark-color: #1E421F;
+  --success-darken-color: #007C3F;
+  --success-light-color: #D2EADB;
+  --success-lighten-color: #60DF9A;
+
+  /* ================= DANGER ================= */
+  --danger-color: #AE1E2C;
+  --danger-dark-color: #5B2A24;
+  --danger-darken-color: #770003;
+  --danger-light-color: #E0C4C2;
+  --danger-lighten-color: #E65555;
+
+  /* ================= WARNING ================= */
+  --warning-color: #CC9900;
+  --warning-dark-color: #50280A;
+  --warning-darken-color: #966B00;
+  --warning-light-color: #E9E3CB;
+  --warning-lighten-color: #FFC945;
+
+  /* ================= INFO ================= */
+  --info-color: #0AA3C2;
+  --info-dark-color: #023E59;
+  --info-darken-color: #007492;
+  --info-light-color: #CFEDED;
+  --info-lighten-color: #5ED4F5;
+
+  /* ================= TEXT ================= */
+  --background-text: #000000;
+  --background-900-text: #000000;
+  --background-800-text: #000000;
+  --background-700-text: #000000;
+  --background-600-text: #FFFFFF;
+  --background-dark-text: #FFFFFF;
+  --background-dark-900-text: #FFFFFF;
+  --background-dark-800-text: #FFFFFF;
+  --background-dark-700-text: #FFFFFF;
+  --background-dark-600-text: #FFFFFF;
+
+  --dominant-text: #FFFFFF;
+  --dominant-dark-text: #FFFFFF;
+  --dominant-darken-text: #FFFFFF;
+  --dominant-light-text: #000000;
+  --dominant-lighten-text: #000000;
+
+  --primary-text: #FFFFFF;
+  --primary-dark-text: #FFFFFF;
+  --primary-darken-text: #FFFFFF;
+  --primary-light-text: #000000;
+  --primary-lighten-text: #FFFFFF;
+
+  --secondary-text: #000000;
+  --secondary-dark-text: #FFFFFF;
+  --secondary-darken-text: #FFFFFF;
+  --secondary-light-text: #000000;
+  --secondary-lighten-text: #000000;
+
+  --success-text: #FFFFFF;
+  --success-dark-text: #FFFFFF;
+  --success-darken-text: #FFFFFF;
+  --success-light-text: #000000;
+  --success-lighten-text: #000000;
+
+  --danger-text: #FFFFFF;
+  --danger-dark-text: #FFFFFF;
+  --danger-darken-text: #FFFFFF;
+  --danger-light-text: #000000;
+  --danger-lighten-text: #FFFFFF;
+
+  --warning-text: #000000;
+  --warning-dark-text: #FFFFFF;
+  --warning-darken-text: #FFFFFF;
+  --warning-light-text: #000000;
+  --warning-lighten-text: #000000;
+
+  --info-text: #FFFFFF;
+  --info-dark-text: #FFFFFF;
+  --info-darken-text: #FFFFFF;
+  --info-light-text: #000000;
+  --info-lighten-text: #000000;
+
+  /* ================= FONTS ================= */
+  --display1-font: 'Golos Text', sans-serif;
+  --display2-font: 'Golos Text', sans-serif;
+  --display4-font: 'Golos Text', sans-serif;
+  --display5-font: 'Golos Text', sans-serif;
+  --display7-font: 'Golos Text', sans-serif;
+}

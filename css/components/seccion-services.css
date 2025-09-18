@@ -1,0 +1,116 @@
+/* =========================================
+   SECCIÓN: .cid-uWpIcP613i
+   Diseño de ítems con iconos y texto
+   ========================================= */
+
+/* ----- Contenedor principal ----- */
+.cid-uWpIcP613i {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #ffffff;
+}
+
+/* Imagen de fallback */
+.cid-uWpIcP613i .mbr-fallback-image.disabled {
+    display: none;
+}
+.cid-uWpIcP613i .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+/* ----- Etiquetas ----- */
+.cid-uWpIcP613i .label-wrapper .mbr-label {
+    display: inline-block;
+    padding: 4px 20px;
+    margin-bottom: 0;
+    border: 1px solid var(--primary-color);
+    color: #000000;
+}
+@media (max-width: 992px) {
+    .cid-uWpIcP613i .label-wrapper .mbr-label {
+        margin-bottom: 20px;
+    }
+}
+
+/* ----- Título principal ----- */
+.cid-uWpIcP613i .mbr-section-title {
+    margin-bottom: 50px;
+    color: #000000;
+}
+@media (max-width: 992px) {
+    .cid-uWpIcP613i .mbr-section-title {
+        margin-bottom: 30px;
+    }
+}
+
+/* ----- Contenedor de ítems ----- */
+.cid-uWpIcP613i .items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (max-width: 992px) {
+    .cid-uWpIcP613i .items-wrapper {
+        display: block;
+    }
+}
+
+/* ----- Ítems individuales ----- */
+.cid-uWpIcP613i .item {
+    width: 50%;
+    padding-right: 40px;
+    margin-bottom: 40px;
+}
+@media (max-width: 992px) {
+    .cid-uWpIcP613i .item {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/* ----- Caja de cada ítem ----- */
+.cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper {
+    margin-bottom: 15px;
+}
+.cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper .title-wrap {
+    display: inline-flex;
+    align-items: center;
+}
+.cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper .title-wrap .iconfont-wrapper {
+    display: inline-flex;
+    margin-right: 15px;
+}
+.cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper .title-wrap .iconfont-wrapper .mbr-iconfont {
+    font-size: 36px;
+    color: #000000;
+    display: inline-flex;
+}
+@media (max-width: 992px) {
+    .cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper .title-wrap .iconfont-wrapper .mbr-iconfont {
+        font-size: 26px;
+    }
+}
+
+/* ----- Texto de cada tarjeta ----- */
+.cid-uWpIcP613i .item .item-wrapper .card-box .title-wrapper .card-title {
+    margin-bottom: 0;
+    color: #000000;
+}
+.cid-uWpIcP613i .item .item-wrapper .card-box .card-text {
+    margin-bottom: 0;
+    color: #8a8a8a;
+}
+
+/* ----- Botones dentro de ítems ----- */
+.cid-uWpIcP613i .item .item-wrapper .card-box .mbr-section-btn {
+    margin-top: 20px;
+}
+.cid-uWpIcP613i .item .item-wrapper .card-box .mbr-section-btn .btn {
+    margin-bottom: 0;
+}

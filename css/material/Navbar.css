@@ -1,0 +1,80 @@
+/* Estilos para el navbar fijo - Versión minimalista y transparente */
+.menu1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto al hacer scroll */
+.menu1.scrolled {
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos para los enlaces del menú */
+.nav-link {
+  color: #000000 !important;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.2rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.scrolled .nav-link {
+  color: #000000 !important;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000000;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.scrolled .nav-link:after {
+  background-color: #000000;
+}
+
+.nav-link:hover:after {
+  width: 60%;
+}
+
+/* Ajustes para los íconos */
+.iconfont-wrapper {
+  color: #000000 !important;
+  transition: all 0.3s ease;
+}
+
+.scrolled .iconfont-wrapper {
+  color: #000000 !important;
+}
+
+.iconfont-wrapper:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+/* Ajuste para el contenido principal */
+body {
+  padding-top: 80px; /* Ajusta según la altura de tu navbar */
+}
+
+/* Transición suave para el scroll */
+html {
+  scroll-behavior: smooth;
+}

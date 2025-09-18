@@ -1,0 +1,188 @@
+.cid-uWpIcP5C6R .navbar-buttons {
+    text-align: center;
+    min-width: 140px;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP5C6R .navbar-buttons {
+        text-align: left;
+    }
+}
+
+.cid-uWpIcP5C6R button.navbar-toggler {
+    outline: none;
+    width: 31px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    align-self: center;
+}
+
+
+/* BOTÓN */
+.btn-custom {
+  background: #3a0ca3; /* Morado */
+  color: white;
+  border: none;
+  border-radius: 45px;
+  padding: 20px 31px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background: #480ca8; /* Morado más oscuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(58, 12, 163, 0.4);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden; /* Changed from auto to hidden to remove scroll */
+  background-color: rgba(0,0,0,0.6);
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(2px);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 30px 20px;
+  border: none;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 35px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  max-height: 55vh;
+  overflow-y: hidden; /* Changed from auto to hidden */
+  position: relative;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform, opacity;
+}
+
+.modal-content h2 {
+  color: #3a0ca3;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  color: #222;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 45px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border: 1px solid #3a0ca3;
+}
+
+/* BOTÓN FORMULARIO */
+.btn-submit {
+  background: #3a0ca3;
+  color: white;
+  border: none;
+  border-radius: 45px;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: #480ca8;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(58, 12, 163, 0.4);
+}
+
+/* CERRAR */
+.close {
+  color: #999;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.close:hover,
+.close:focus {
+  color: #3a0ca3;
+  background: rgba(0, 0, 0, 0.03);
+  transform: scale(1.1) rotate(90deg);
+  opacity: 1;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Modal open state */
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Smooth scroll for the content if needed */
+.modal-content-inner {
+  max-height: calc(80vh - 50px);
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #3a0ca3 transparent;
+}
+
+/* Custom scrollbar */
+.modal-content-inner::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content-inner::-webkit-scrollbar-thumb {
+  background-color: #3a0ca3;
+  border-radius: 3px;
+}

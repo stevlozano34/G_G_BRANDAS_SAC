@@ -1,0 +1,27 @@
+.cid-uWpIcP7KgK {
+    background-image: url("/images/servicios/servi2.jpg");
+}
+
+.cid-uWpIcP7KgK .mbr-fallback-image.disabled {
+    display: none;
+}
+
+.cid-uWpIcP7KgK .mbr-fallback-image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.cid-uWpIcP7KgK .image-wrap {
+    height: 500px;
+}
+
+@media (max-width: 992px) {
+    .cid-uWpIcP7KgK .image-wrap {
+        height: 450px;
+    }
+}
